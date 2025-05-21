@@ -94,33 +94,32 @@
     </section>
 
 
-    <table class="tabla-referencias">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Cargo</th>
-      <th>Descripción</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>María González</td>
-      <td>Líder de Proyecto en TechNova S.A.</td>
-      <td>Colaboró con John en un proyecto de automatización. Destacó por su compromiso y capacidad para adaptarse rápidamente.</td>
-    </tr>
-    <tr>
-      <td>Carlos Méndez</td>
-      <td>Ingeniero de Software Senior en DevSolutions</td>
-      <td>Trabajó junto a John en un sistema de inventario. Valoró su código limpio y dominio de bases de datos.</td>
-    </tr>
-    <tr>
-      <td>Andrea Pérez</td>
-      <td>Coordinadora Académica en ESPOL</td>
-      <td>Supervisó a John como asistente en un curso. Lo reconoció por su responsabilidad y apoyo al equipo.</td>
-    </tr>
-  </tbody>
-</table>
-
+  <table class="tabla-referencias">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cargo</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Nombre">María González</td>
+        <td data-label="Cargo">Líder de Proyecto en TechNova S.A.</td>
+        <td data-label="Descripción">Colaboró con John en un proyecto de automatización. Destacó por su compromiso y capacidad para adaptarse rápidamente.</td>
+      </tr>
+      <tr>
+        <td data-label="Nombre">Carlos Méndez</td>
+        <td data-label="Cargo">Ingeniero de Software Senior en DevSolutions</td>
+        <td data-label="Descripción">Trabajó junto a John en un sistema de inventario. Valoró su código limpio y dominio de bases de datos.</td>
+      </tr>
+      <tr>
+        <td data-label="Nombre">Andrea Pérez</td>
+        <td data-label="Cargo">Coordinadora Académica en ESPOL</td>
+        <td data-label="Descripción">Supervisó a John como asistente en un curso. Lo reconoció por su responsabilidad y apoyo al equipo.</td>
+      </tr>
+    </tbody>
+  </table>
 
     <section id="contacto">
     <h2>Contacto</h2>
@@ -130,15 +129,18 @@
       <p><strong>Lugar de Residencia:</strong> Ecuador, Guayaquil</p>
       <p><strong>Universidad:</strong> ESPOL</p>
 
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4840965311654!2d-79.96797233043433!3d-2.147945799789085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d3f4f53b4c1%3A0xd7d7bc948ee9475a!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716123254100!5m2!1ses!2sec" 
-        width="900" 
-        height="250" 
-        style="border: 3px ; border-radius: 0.5% ;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="mapa-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4840965311654!2d-79.96797233043433!3d-2.147945799789085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d3f4f53b4c1%3A0xd7d7bc948ee9475a!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716123254100!5m2!1ses!2sec" 
+          width="100%" 
+          height="100%" 
+          style="border: 3px solid; border-radius: 0.5%;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
       
       <h2>Formulario</h2>
     <form action="/enviar" method="POST" class="formulario-contacto">

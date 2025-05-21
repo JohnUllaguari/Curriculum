@@ -1,3 +1,6 @@
+html {
+  font-size: clamp(14px, 2vw, 18px);
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,9 +10,9 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-
+/* Header */
 header {
-  background-color: #1f2937; 
+  background-color: #1f2937;
   padding: 30px 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   display: flex;
@@ -18,7 +21,9 @@ header {
 
 .perfil {
   display: flex;
-  align-items: center ;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align:center-left ;
   gap: 25px;
   max-width: 900px;
   width: 100%;
@@ -34,7 +39,7 @@ header {
 }
 
 .perfil .info h1 {
-  font-size: 2.4rem;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
   margin: 0;
   color: #4ade80;
 }
@@ -45,21 +50,23 @@ header {
   color: #a3a3a3;
 }
 
-
+/* Nav */
 nav {
   background: transparent;
-  padding: 30px 20px;
+  padding: 25px 15px;
   display: flex;
   justify-content: center;
 }
 
 .flashcards-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
-  max-width: 900px;
+  max-width: 1500px;
   width: 100%;
 }
 
@@ -81,10 +88,13 @@ nav {
   text-align: center;
   user-select: none;
   text-decoration: none;
+  flex: 1 1 220px;
+  min-width: 140px;
+  font-size: 1rem;
 }
 
 .flashcard:hover {
-  background: #22c55e; /* verde más oscuro */
+  background: #22c55e;
   box-shadow: 0 15px 30px rgba(34, 197, 94, 0.7);
   transform: translateY(-8px) scale(1.05);
 }
@@ -95,14 +105,15 @@ nav {
   background: #16a34a;
 }
 
-
+/* Main content */
 main {
   max-width: 900px;
-  margin: 40px auto 60px;
-  padding: 30px 20px;
-  background: #1f2937; /* mismo gris oscuro */
+  margin: 40px auto 70px;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #1f2937;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  width: min(95%, 900px);
 }
 
 section {
@@ -134,17 +145,16 @@ ul {
   margin-bottom: 10px;
 }
 
-/*vidoe*/ 
+/* Video */
 .video-container {
   position: relative;
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+  aspect-ratio: 16 / 9;
   background: #000;
-  border-radius: 8px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .video-container iframe {
@@ -153,10 +163,11 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border: 0;
+  border-radius: 50px; 
 }
 
-/*referencias*/
+/* Testimonials */
 .contenedor-testimonios {
   display: flex;
   flex-direction: column;
@@ -202,9 +213,7 @@ ul {
   color: #e5e7eb;
 }
 
-
-/*refeeeeee*/
-/* Tabla de Referencias */
+/* References Table */
 .tabla-referencias {
   width: 100%;
   border-collapse: collapse;
@@ -236,8 +245,29 @@ ul {
   background-color: #374151;
 }
 
+/*mapa*/
+.mapa-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Puedes ajustar el max-width según el diseño que desees */
+  margin: 0 auto; 
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
 
-/*formulario*/
+.mapa-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+/* Contact Form */
 .formulario-contacto {
   max-width: 900px;
   margin-left: 0;
@@ -245,13 +275,11 @@ ul {
   font-family: sans-serif;
 }
 
-
 .formulario-contacto h2 {
   text-align: left;
   margin-bottom: 20px;
   color: #4ade80;
 }
-
 
 .form-group {
   margin-bottom: 15px;
@@ -307,14 +335,112 @@ button:hover {
   background-color: #22c55e;
 }
 
-
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #111827; /* un gris más oscuro */
+  background-color: #111827;
   color: #4ade80;
   border-radius: 0 0 12px 12px;
   font-size: 0.9rem;
   box-shadow: inset 0 1px 5px #222;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .perfil {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .perfil img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .perfil .info h1 {
+    font-size: 1.8rem;
+  }
+
+  .flashcards-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .flashcard {
+    padding: 15px 25px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, ul, .testimonio p {
+    font-size: 1rem;
+  }
+
+  .tabla-referencias th,
+  .tabla-referencias td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .formulario-contacto {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flashcard {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .perfil .info h1 {
+    font-size: 1.6rem;
+  }
+
+  .video-container {
+    padding-bottom: 100%; /* para pantallas muy pequeñas */
+  }
+
+  .tabla-referencias thead {
+    display: none;
+  }
+
+  .tabla-referencias, 
+  .tabla-referencias tbody, 
+  .tabla-referencias tr, 
+  .tabla-referencias td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-referencias td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  .tabla-referencias td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #4ade80;
+    text-align: left;
+  }
 }
