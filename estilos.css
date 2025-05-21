@@ -149,12 +149,13 @@ ul {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 100%;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: 50px;
-  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: #000;
+  border-radius: 8px; 
+  overflow: hidden; 
 }
 
 .video-container iframe {
@@ -163,8 +164,8 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  border-radius: 50px; 
+  border: none; 
+  border-radius: 8px;
 }
 
 /* Testimonials */
@@ -249,7 +250,7 @@ ul {
 .mapa-container {
   position: relative;
   width: 100%;
-  max-width: 900px; /* Puedes ajustar el max-width según el diseño que desees */
+  max-width: 900px;
   margin: 0 auto; 
   padding-bottom: 56.25%; 
   height: 0;
@@ -403,44 +404,35 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  .flashcard {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .perfil .info h1 {
-    font-size: 1.6rem;
-  }
-
-  .video-container {
-    padding-bottom: 100%; /* para pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .tabla-referencias {
+    border: 0; 
   }
 
   .tabla-referencias thead {
     display: none;
   }
 
-  .tabla-referencias, 
-  .tabla-referencias tbody, 
-  .tabla-referencias tr, 
-  .tabla-referencias td {
+  .tabla-referencias tr {
     display: block;
-    width: 100%;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
 
   .tabla-referencias td {
-    padding: 10px;
-    text-align: right;
+    display: block;
+    text-align: right; 
+    padding-left: 50%; 
     position: relative;
   }
 
-  .tabla-referencias td::before {
+  .tabla-referencias td:before {
     content: attr(data-label);
     position: absolute;
     left: 10px;
     font-weight: bold;
-    color: #4ade80;
-    text-align: left;
+    text-transform: uppercase;
   }
 }
