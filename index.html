@@ -43,6 +43,17 @@
         <li><strong>Carrera:</strong> Ingeniería en Ciencias Computacionales</li>
         <li><strong>Estado:</strong> En curso</li>
       </ul>
+      <div class="mapa-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4840965311654!2d-79.96797233043433!3d-2.147945799789085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d3f4f53b4c1%3A0xd7d7bc948ee9475a!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716123254100!5m2!1ses!2sec" 
+          width="100%" 
+          height="100%" 
+          style="border: 3px solid; border-radius: 0.5%;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </section>
 
     <section id="habilidades">
@@ -59,7 +70,7 @@
     </section>
 
     <section id="video">
-      <h2 class="video-title">Análisis de Algoritmos</h2>
+      
       <div class="video-container">
         <iframe
           src="https://www.youtube.com/embed/2ZLl8GAk1X4"
@@ -127,61 +138,47 @@
       <p><strong>Email:</strong> johjaull@espol.edu.ec</p>
       <p><strong>Idiomas:</strong> Español, Ingles</p>
       <p><strong>Lugar de Residencia:</strong> Ecuador, Guayaquil</p>
-      <p><strong>Universidad:</strong> ESPOL</p>
-
-      <div class="mapa-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4840965311654!2d-79.96797233043433!3d-2.147945799789085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d3f4f53b4c1%3A0xd7d7bc948ee9475a!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716123254100!5m2!1ses!2sec" 
-          width="100%" 
-          height="100%" 
-          style="border: 3px solid; border-radius: 0.5%;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      
+    
       <h2>Formulario</h2>
-    <form action="/enviar" method="POST" class="formulario-contacto">
-      <div class="form-group">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
+      <form action="/enviar" method="POST" class="formulario-contacto">
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
 
-      <div class="form-group">
-        <label for="carrera">Carrera:</label>
-        <select id="carrera" name="carrera" required>
-          <option value="">Seleccione una opción</option>
-          <option value="computacion">Ingeniería en Computación</option>
-          <option value="electronica">Ingeniería en Electrónica</option>
-          <option value="mecanica">Ingeniería Mecánica</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="carrera">Carrera:</label>
+          <select id="carrera" name="carrera" required>
+            <option value="">Seleccione una opción</option>
+            <option value="computacion">Ingeniería en Computación</option>
+            <option value="electronica">Ingeniería en Electrónica</option>
+            <option value="mecanica">Ingeniería Mecánica</option>
+          </select>
+        </div>
 
-      <fieldset class="form-group">
-        <legend>Modalidad de estudio:</legend>
-        <label><input type="radio" name="modalidad" value="presencial" required> Presencial</label>
-        <label><input type="radio" name="modalidad" value="virtual" required> Virtual</label>
-      </fieldset>
+        <fieldset class="form-group">
+          <legend>Modalidad de estudio:</legend>
+          <label><input type="radio" name="modalidad" value="presencial" required> Presencial</label>
+          <label><input type="radio" name="modalidad" value="virtual" required> Virtual</label>
+        </fieldset>
 
-      <fieldset class="form-group">
-        <legend>Áreas de interés:</legend>
-        <label><input type="checkbox" name="intereses" value="ia" required> Inteligencia Artificial</label>
-        <label><input type="checkbox" name="intereses" value="web" required> Desarrollo Web</label>
-        <label><input type="checkbox" name="intereses" value="iot" required> IoT</label>
-      </fieldset>
+        <fieldset class="form-group">
+          <legend>Áreas de interés:</legend>
+          <label><input type="checkbox" name="intereses" value="ia" required> Inteligencia Artificial</label>
+          <label><input type="checkbox" name="intereses" value="web" required> Desarrollo Web</label>
+          <label><input type="checkbox" name="intereses" value="iot" required> IoT</label>
+        </fieldset>
 
-      <div class="form-group">
-        <label for="comentarios">Comentarios adicionales:</label>
-        <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
-      </div>
+        <div class="form-group">
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+        </div>
 
-      <div class="form-group">
-        <button type="submit">Enviar</button>
-      </div>
+        <div class="form-group">
+          <button type="submit">Enviar</button>
+        </div>
 
-    </form>
+      </form>
     </section>
   </main>
 
