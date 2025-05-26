@@ -366,6 +366,7 @@ footer {
   .perfil img {
     width: 90px;
     height: 90px;
+    object-fit: cover;
   }
 
   .perfil .info h1 {
